@@ -1,0 +1,30 @@
+.guess-section {
+  display: flex;
+  justify-content: center;
+  margin: 16px;
+}
+
+.letter-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border-bottom: black 3px solid;
+  height: 56px;
+  width: 48px;
+  margin: 16px;
+}
+
+.letter {
+  font-size: 32px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border-radius: 10px;
+
+  &.selected {
+    font-size: 32px;
+    background-color: rgb(207, 207, 207);
+    height: 56px;
+    width: 48px;
+  }
+}
