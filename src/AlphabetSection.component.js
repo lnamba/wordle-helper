@@ -1,6 +1,6 @@
 import React from 'react';
 
-import './AlphabetStyles.css'
+import './LetterStyles.scss'
 
 function AlphabetSection(props) {
   const { alphabet, selectedLetter, setSelectedLetter } = props;

@@ -1,6 +1,7 @@
 import React, { useState } from 'react';
 
 import AlphabetSection from './AlphabetSection.component';
+import Button from './Button.component';
 import GuessSection from './GuessSection.component'
 
 const ALPHABET = ['A','B','C','D','E','F','G','H','I','J','K','L','M','N','O','P','Q','R','S','T','U','V','W','X','Y','Z'];
@@ -25,6 +26,26 @@ function HelperBoard() {
     }
   }
 
+  const handleShuffle = () => {
+    let result = [...alphabet];
+    for (let i = 0; i < result.length; i++) {
+      const random = Math.floor(Math.random() * result.length);
+      let current = result[i];
+      result[i] = result[random];
+      result[random] = current;
+    }
+  
+    setAlphabet(result);
+  }
+
+  const handleDelete = () => {
+
+  }
+
+  const handleReset = () => {
+
+  }
+
   return (
     <div>
       <h1>Wordle Helper</h1>
@@ -41,6 +62,10 @@ function HelperBoard() {
           selectedLetter={selectedLetter} 
           setSelectedLetter={setGuessedLetter} 
         />
+
+        <Button text="Shuffle" action={handleShuffle} />
+        <Button text="Delete" action={handleDelete} />
+        <Button text="Reset" action={handleReset} />
     </div>
   )
 }

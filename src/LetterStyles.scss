@@ -28,3 +28,22 @@
     width: 48px;
   }
 }
+
+.alphabet-section {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  flex-wrap: wrap;
+}
+
+.alphabet-letter {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: center;
+  border-radius: 10px;
+  background-color: peru;
+  margin: 16px;
+  height: 56px;
+  width: 48px;
+}
